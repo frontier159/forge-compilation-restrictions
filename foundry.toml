@@ -2,5 +2,13 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+min_solc_version = '0.8.22'
+max_solc_version = '0.8.22'
 
-# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+additional_compiler_profiles = [
+  { name = "solc-19", min_solc_version = '0.8.19', max_solc_version = '0.8.22' },
+]
+
+compilation_restrictions = [
+    { paths = "src/Counter-0.8.19.sol", min_solc_version = '0.8.19', max_solc_version = '0.8.22' },
+]
